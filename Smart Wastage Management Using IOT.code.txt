@@ -1,0 +1,61 @@
+#include <WiFi.h>
+#include <Ultrasonic.h>
+
+// WiFi credentials
+const char* ssid = "Redmi 9 Prime";
+const char* password = "Rosh@n7822";
+
+// ThingSpeak API credentials
+const char* apiKey = "your_api_key";
+const char* thingSpeakServer = "Smart Wastage Management Using IOT";
+
+// Ultrasonic sensor pins
+const int trigPin = 9;
+const int echoPin = 10;
+
+// Waste bin lid sensor pin
+const int lidPin = 2;
+
+// WiFi client
+WiFiClient client;
+
+// ThingSpeak channel ID
+const int channelID = 123456;
+
+void setup() {
+  Serial.begin(9600);
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Connecting to WiFi...");
+  }
+  Serial.println("Connected to WiFi");
+  ThingSpeak.begin(client);
+}
+
+void loop() {
+  // Read ultrasonic sensor data
+  int distance = readUltrasonic();
+  
+  // Check waste bin lid status
+  int lidStatus = digitalRead(lidPin);
+  
+  // Send data to ThingSpeak
+  sendToThingSpeak(distance, lidStatus);
+  
+  delay(10000); // Send data every 10 seconds
+}
+
+int readUltrasonic() {
+  // Read ultrasonic sensor data
+  int duration = pulseIn(echoPin, HIGH);
+  int distance = (duration * 0.034) / 2;
+  return distance;
+}
+
+void sendToThingSpeak(int distance, int lidStatus) {
+  // Send data to ThingSpeak
+  ThingSpeak.setField(1, distance);
+  ThingSpeak.setField(2, lidStatus);
+  ThingSpeak.writeFields(channelID, apiKey);
+}

@@ -1,0 +1,276 @@
+Project by :-
+Roshan S. Jadhav
+Pratik S. Ujagare
+Kamlesh B. Jagale
+Abhishek R. Palde
+ 
+ 	 	CHAPTER-1 
+__________________________________________________________________________ 
+ 
+INTRODUCTION 
+We are living in an age where tasks and systems are fusing together with the power of IOT to have a more efficient system of working and to execute jobs quickly! With all the power at our finger tips this is what we have come up with. The Internet of Things (IoT) shall be able to incorporate transparently and seamlessly a large number of different systems, while providing data for   millions of people to use and capitalize. Building a general architecture for the IoT is hence a very complex task, mainly because of the extremely large variety of devices, link layer technologies, and services that may be involved in such a system. One of the main concerns with our environment has been solid waste management which impacts the health and environment of our society. The detection, monitoring and management of wastes is one of the primary problems of the present era. The traditional way of manually monitoring the wastes in waste bins is a cumbersome process and utilizes more human effort, time and cost which can easily be avoided with our present technologies. This is our solution, a method in which waste management is automated. This is our IoT Garbage Monitoring system, an innovative way that will help to keep the cities clean and healthy. 
+1.1 The problem 
+Nowadays, there are tons of flats and apartments which have been built in the rapid urbanization area. This is due to high housing demands which have been drastically risen as a result of migration from villages to cities to find work. In order to accommodate the growing population in the urban area, the government has also constructed more apartment complexes. There are several issues faced by the residents of the flats. One of them is disposal of solid waste. Unlike private houses, the residents of all the apartments use a common dustbin, which tends to fill up very quickly. This overflowing of garbage is a sanitary issue which might cause diseases like cholera and dengue. Moreover it is a waste of fuel to travel around a complex or an area to find that some of the garbage are filled and some are not. Also, on rare days, problems might arise that there is so much garbage that the truck doesn’t have enough capacity. The idea struck us when we observed that the garbage truck use to go around the town to collect solid waste twice a day. Although this system was thorough it was very inefficient. For example let's say street A is a busy street and we see that the garbage fills up really fast whereas may b street B even after two days the bin isn't even half full. This example is something that actually happens thus it lead us to the ''Eureka'' moment 
+What our system does is it gives a real time indicator of the garbage level in a trashcan at any given time. Using that data we can then optimize waste collection routes and ultimately reduce fuel consumption. It allows trash collectors to plan their daily/weekly pick up schedule. An Ultrasonic Sensor is used for detecting whether the trash can is filled with garbage or not. Here Ultrasonic Sensor is installed at the top of Trash Can and will measure the distance of garbage from the top of Trash can and we can set a threshold value according to the size of trash can. If the distance will be less than this threshold value,means that theTrash can is full of garbage and we will print the message 
+“Basket is Full” on the message and if the distance will be more than this threshold value, then we will print the distance remaining for the garbage vat to be full 	 
+ 
+ 
+ 
+1.2 Solutions 
+Previously there were numerous initiatives on waste management and educating people to dispose waste properly, and as they failed to achieve significant results, we have figured out the scopes that could be develop. To solve this problem, we have designed a process that ensures proper disposal and efficient waste collection. The procedures we designed involves creative initiative that will inspire people to dump in designated area or bins, and innovative method by using Decreasing Time algorithm or DTA for monitoring garbage generation and collection of the garbage’s. 
+ 
+ 1.1 Figure : monitoring garbage 
+ 	 
+ 
+ 
+ 
+ 
+ 
+CHAPTER -2 
+______________________________________________________________________________________________________________________________ 
+LITERATURE SURVAY 
+The Garbage Monitoring system, which monitors the garbage bins and informs about the level of garbage collected in the garbage bins via a web page. Fig. 6 shows the System design  in which system uses ultrasonic sensors placed over the bins to detect the garbage level and compare it with the garbage bins depth. The proposed system uses Arduino family microcontroller (The LPC2131/32/34//38 microcontrollers are based on a 16/32-bit ARM7TDMI-S CPU with real-time emulation), LCD screen, GSM (used to send message to the garbage depot if the Garbage Can exceeds the set threshold level) Ultrasonic Sensor (Sensor sends out a high-frequency sound pulse and then times how long it takes for the echo of the sound to reflect back). 
+ 
+2.1 Figure : Smart Waste Management Using IotConcep 
+CHAPTER -3 
+__________________________________________________________________________________________________ 
+HARDWARE REQUIREMENTS 
+We will need the following hardware to accomplish our project.  
+• Arduinouno board  
+• .HC-SR04 ultrasonic sensor. 
+• GSM 900 module  
+• LCD (Liquid Crystal Display) 
+• AC adpter 
+3.1 ARDUINO UNO 
+Arduino is an open-source platform used for building electronics projects. Arduino consists of both a physical programmable circuit board (often referred to as a microcontroller) and a piece of software,or IDE(Integrated Development Environment) that runs on your computer, used to write and upload computer code to the physical board. 
+• The Arduino platform has become quite popular with people just starting out with electronics, and for good reason. Unlike most previous programmable circuit boards, the Arduino does not need a separate piece of hardware (called a programmer) in order to load new code onto the board – you can simply use a USB cable. Additionally, the Arduino IDE uses a simplified version of C++,making it easier to learn to program. Finally, Arduino provides a standard form factor that breaks out the functions of the micro-controller into a more accessible package. The Arduino is a microcontroller board based on the ATmega8. It has 14 digital -input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a16 MHz ceramic resonator, a USB connection, a powerjack, an ICSP header, and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started .The Uno differs from all preceding boards in that it does not use the FTDI USB-to-serial driver chip. Instead, it features the Atmega16U2(Atmega8U2 up to version R2) programmed as a USB-toserial converter .Revision 2 of the Uno board has a resistor pulling the 8U2HWB line to ground, making it easier to put into DFU mode. Revision of the board has the following new features: 
+• Pin out: added SDA and SCL pins that are near to the AREF pin and two other new pins placed near to the RESET pin, the IOREF that allow the shields to adapt to the voltage provided from the board. In future, shields will be compatible with both the board that uses the AVR, which operates with 5V and with the Arduino Due that operates with3.3V. The second one is a not connected pin that is reserved for future purposes. 
+• Stronger RESET circuit. 
+• AT mega 16U2 replace the 8U2. 
+"Uno" means one in Italian and is named to mark the upcoming release of Arduino 1.0. The Uno and version 1.0 will be the reference versions of Arduino, moving forward. The Uno is the latest in a series of USB Arduino boards, and the reference model for the Arduino platform 
+ 
+3.1 Figure : ARDUINO UNO BOARD 
+Parameters ForArduino UNODescription 	 
+Microcontroller ATmega328 Operating Voltage  5v Input Voltage 
+(recommended) 7-12V Input Voltage (limits) 6-20V Digital I/O Pins 14 Analog Input Pins 6 DC Current per I/O Pin 40mA DC Current for 3.3V Pin 50mA Flash Memory 32KB(ATmega328) of which 0.5KB used by bootloader SRAM 2 KB (ATmega328) EEPROM 1 KB (ATmega328) Clock Speed 16MHz Length 68.6 mm Width 53.4 mm Weight 53gm  	 
+3.1 Table :Specifications of Arduino 
+3.2 HC-SR04 ULTRASONIC SENSOR. 
+HC-SR04 is an ultrasonic sensor which is used for measuring the distance between the top of the lid to the top of the garbage 
+PIN 
+NUMBR PIN 
+NAME DESCRIPTION 1 VCC The Vcc pin powers the sensor, typically with +5V 2 Trigger Trigger pin is an Input pin. This pin has to be kept high for 10us to initialize measurement by sending US wave. 3 Echo Echo pin is an Output pin. This pin goes high for a period of time which will be equal to the time taken for the US wave to return back to the sensor 4 GND This pin is connected to the Ground of the system  
+ 
+ 
+3.2 Table: Pin Number and Function of Ultrasonic sensor 
+3.2.2 HC-SR04 SENSOR FEATURES. 
+* Operating voltage: +5V 
+* Theoretical Measuring Distance: 2cm to 450cm 
+* Accuracy: 3mm 
+* Measuring angle covered: <15° 
+* Operating Current: <15ma 
+* Operating Frequency: 40Hz 
+3.2.3 ULTRASONIC SENSOR WORKING 
+The HC-SR04 Ultrasonic (US) sensor is a 4 pin module, whose pin names are Vcc, Trigger, Echo and Ground respectively. This sensor is a very popular sensor used in many applications where measuring distance or sensing objects are required. The module has two eyes like projects in the front which forms the Ultrasonic transmitter and Receiver. The sensor works with the simple high school formula that 
+Distance = Speed × Time 
+The Ultrasonic transmitter transmits an ultrasonic wave, this wave travels in air and when it gets objected by any material it gets reflected back toward the sensor this reflected wave is observed by the Ultrasonic receiver module. Now, to calculate the distance using the above formulae, we should know the Speed and time. Since we are using the Ultrasonic wave we know the universal speed of US wave at room conditions which is 330m/s. The circuitry inbuilt on the module will calculate the time taken for the US wave to come back and turns on the echo pin high for that same particular amount of time, this way we can also know the time taken. Now simply calculate the distance using a microcontroller or microprocessor 
+ 
+3.2 Figure : HCSR04 ULTRASONIC SENSOR 
+3.3 GSM MODULE. 
+GSM/GPRS module is used to establish communication between a computer and a GSMGPRS system. Global System for Mobile communication (GSM) is an architecture used for mobile communication in most of the countries. Global Packet Radio Service (GPRS) is an extension of GSM that enables higher data transmission rate. GSM/GPRS module consists of a GSM/GPRS modem assembled together with power supply circuit and communication interfaces (like RS-232, USB, etc) for computer. GSM/GPRS MODEM is a class of wireless MODEM devices that are designed for communication of a computer with the GSM and GPRS network. It requires a SIM (Subscriber Identity Module) card just like mobile phones to activate communication with the network. Also they have IMEI (International Mobile Equipment Identity) number similar to mobile phones for their identification. A GSM/GPRS 
+MODEM can perform the following operations: 
+1. Receive, send or delete SMS messages in a SIM. 
+2. Read, add, search phonebook entries of the SIM. 
+3. Make, Receive, or reject a voice call. 
+The MODEM needs AT commands, for interacting with processor or controller, which are communicated through serial communication. These commands are sent by the controller/processor. The MODEM sends back a result after it receives a command. Different AT commands supported by the hGSM and GPRS cellular network. A GSM modem is a wireless modem that works with a GSM wireless network. A wireless modem behaves like a dial-up modem. The main difference between them is that a dial-up modem sends and receives data through a fixed telephone line while a wireless modem sends and receives data through radio waves .A GSM modem can be an external device or a PC Card / PCMCIA Card. Typically, an external PC Card / PCMCIA Card is designed for use with a laptop computer. It should be inserted into one of the PC Card / PCMCIA Card slots of a laptop computer. Like a GSM mobile phone, a GSM modem requires a SIM card from a wireless carrier in order to operate. 
+A SIM card contains the following information: 
+* Subscriber telephone number (MSISDN) 
+* International subscriber number (IMSI, International Mobile Subscriber Identity) 
+* State of the SIM card 
+* Service code (operator) 
+* Authentication key 
+* PIN (Personal Identification Code) 
+* PUK (Personal Unlock Code) 
+ 
+3.3 Figure . GSM Module Block Diagram 
+Computers use AT commands to control modems. Both GSM modems and dial-up modems support a common set of standard AT commands. In addition to the standard AT commands, GSM modems support an extended set of AT commands. These extended AT commands are defined in the GSM standards. With the extended AT commands, the following operations can be performed: 
+* Reading, writing and deleting SMS messages. 
+* Sending SMS messages. 
+* Monitoring the signal strength 
+* Reading, writing and searching phone book entries. 
+3.4 LCD (Liquid Crystal Display) 
+LCD is used in a project to visualize the output of the application. We have used 16x2 LCD .So we can write 16 characters in each line. Total 32 characters we can display on 16x2 LCD.LCD can also use in a project to check the output of different modules interfaced with the microcontroller. Thus LCD plays a vital role in a project to see the output will come with a message that the basket is full .this mess display on the lcd. 
+The level of the dustbin is calculated by measuring the distance of the nearest obstacle using an ultrasonic sensor. Arduino UNO R3 is used as the microcontroller to read the data from the ultrasonic sensor. It is programmed to send a GSM alert to the message on the garbage reaches a certain distance. Arduino for the verification process. The ultrasonic sensor checks the status of the dustbin and sends it to the GSM. The GSM send an alert message through the mobile phone. 
+ 
+3.4 Figure : LCD Display 
+ 
+ 
+ 
+ 
+ 
+ 
+CHAPTER_4 
+________________________________________________ 
+4.1 SYSTEM  DESIGN 
+In this section we design structure of the system before implementation of circuit. we use advanced microcontroller called Arduino (ATmega8). It has in built with many components like analog to digital converter, clock of 16 MHz, shift registers. In this project we put the ultrasonic sensor on top of the garbage bin/ dump.  
+The output of the ultrasonic sensor is processed by the Arduino and the output is then sent to the GSM module which sends a text message to the concerned person. We have a threshold value of 10cm.Which means that if the distance of the sensor from the top of the garbage is less than 10cm, the output will come with a message that the basket is full. this mess display on the lcd. 
+ 
+ 
+ 	4.1 Figure : project diagram 
+ 
+ 
+4.2 Flow Chart 
+ 
+4.2 Figure : Flow chart of project 
+ 
+ 
+ 
+CHAPTER -5 
+_________________________________________________ 
+ IMPLEMENTATION 
+5 .1 Hardware implementation 
+The circuit diagram for arduino and ultrasonic sensor Is use to measure the  measure the distance. In Circuit connections Ultrasonic sensor module’s 
+“trigger” and “echo”pins are directly connected to Digital pin of arduino.A16x2LCD is connected with arduino in 4-bitmode.Control pin RS,RW And En are directly connected to arduino pin2,GNDand3.And datapin D4-D7 is connected to 4, 5,6 and 7 of arduino. First to fall we need to trigger the ultrasonic sensor module to transmit signal by using arduino And then wait for receive ECHO. Arduino reads the time between trigger in gand Received ECHO. We know that speed of sound is around 340m/s. so we cancal culate distance by using given formula: 
+Distance=(traveltime/2)*speedofsound 
+ 
+The recived single are send to gsm module are connected to tx and rx Pin when garbage are Ditected by ultrasonic sensorits send data to arduino If  dust bines full arduino send data serialy To gsm and gsm is send to mobile. Also the output will come with a message that the basket is full this mess display on the lcd. 
+ 
+ 
+                     5.1 Figure : circuit diagram 5.2 Software implementation. 
+The software required for it is the Arduino IDE. 
+5.2.1 Arduino Ide 
+The open-source Arduino Software (IDE) makes it easy to write code and upload it to the board. It runs on Windows, Mac OS X, and Linux. The environment is written in Java and based on Processing and other open-source software. This software can be used with any Arduino board. The Arduino development environment contains a text editor for writing code, a message area, a text console, a toolbar with buttons for common functions, and a series of menus.  
+It connects to the Arduino hardware to upload programs and communicate with them. Software written using Arduino are called sketches. These sketches are written in the text editor. Sketches are saved with the file extension . It has features for cutting for searching/replacing text. The message area gives feedback while saving and exporting and also displays errors. The console displays text output by the Arduino environment including complete error messages and other information. The bottom right-hand corner of the window displays the current board and serial port. The toolbar buttons allow you to verify and upload programs, create, open, and save sketches, and open the serial monitor.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+CHAPTER -6 
+_________________________________________________ 
+SYSTEM TESTING 
+6.1 Test approach 
+We will test the project in two stages: software and hardware. The software part is to be tested via the Arduino IDE, whereas the hardware part has to be tested physically. It is necessary to check whether the system is working properly or not. To check whether the readings are accurate, we will check the distance pointed out by the sensor by a meter tape. 
+6.2 Features to be tested 
+After building the whole circuit we test it, testing procedure is given This project should satisfy some features. Features to be tested as follows: 
+• The ultrasonic sensor should give proper output. To check whether the output is accurate or not, the output of the sensor will be checked against a meter tape. 
+• The arduino board should show the distance in the serial monitor. So should the Node MCU. 
+• The GSM module should send messages after the specified delay. If the text messages are reaching the phone, that means the GSM module is working. It should make a small ringing sound, when it sends messages. 
+6.2.2 Testing tools and environment 
+For testing of the project we require some tools, like to test Arduino program we require a software called Arduino IDE. Using this we can check the program that program is working properly or not. For hardware checking we require power supply and proper range of measurements and a meter tape. The garbage dump should have only solid waste. 
+6.3 Test cases. 
+In this section we discuss about the inputs, expected output, testing procedure.6.3.1 Inputs 
+This project requires two  inputs: 
+1. Power supply :Power supply is the basic need of any electronic circuit. Here we use 5v dc battery to give power Arduino and sometimes we can give power directly from the computer. We also need a 12V power supply for the GSM module. 
+2. We can also power these circuits via two 9v batteries using a circuit divider.Distance .The distance will be the input of the Arduino circuit and will be gotten from the ultrasonic sensor. 
+6.3.2 Expected output 
+The expected output of this project should be a text message showing the distance to full. The output should also be seen on the serial monitor of the 
+Arduino IDE. Also, the output should also be seen on the serial monitor 
+6.3.3 Testing procedure: 
+For testing first connect the circuit to the power supply is given to the Arduino using computer and it can be done by using battery. In this way the whole testing circuit is built. Now we give input to the HC-SR04 by changing the level of solid garbage.. Change in garbage levels should be messaged using GSM Module. 
+Summary of testing procedure:- 
+1 ) Connect the circuit according to the diagram 2) Give power to the system. 
+3) Vary garbage level for the ultrasonic sensor to give output. 
+4) Send message via the GSM module 
+ 
+CHAPTER -7 
+_________________________________________________ 
+ 7.1 Advantages: 
+• Very simple circuit. 
+• The HCSR04 sensor is very rugged. 
+• Helps monitor garbage levels. 
+• Uses very small amount of electricity. 
+• Ultimately helps in better planning of garbage pickups. 
+• Can help in reducing overflowing bins. 
+• Reduces trips to areas where the bins still have a lot of capacity. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CHAPTER -8 
+__________________________________________________________________________ 
+APPLICATION 
+1.The ultimate goal of IoT applications in waste management is producing leaner operations And delivering higher quality services to citizens. 
+2.A growing collection finter linked autonomous systems are managing everyday urban Operations and improving both citizen experiences and our carbon footprint. 
+3.Ultimately,however we need deeper coordination between public sectors— through a mix of Regulation and incentives—and private sectors—through a willingness to engage with regional, state,  and  federal agencies to use IoT application in waste management to build a better and more sustainable future. 4.Our attention has been increasingly brought to the need to manage,reduce,recycleand Reuse the mountains of waste generated in cities everyday. 
+5.While this is bno means an easy task,technology has stepped into helpus make everyday City management operations more sustainable. 
+6.IoT application sin waste management are effectively improving municipal operations. 
+7.Predefined routes and outdated methods of waste collection are increasingly being replaced With sensor-enabled bins and sophisticated waste management applications. 
+ 
+ 
+ 
+ 
+CHAPTER -9 
+_________________________________________________ 
+FUTURE  SCOPE 
+1.To make the cities greener,safer,and more efficient,Internet of Things (IoT) Can play an important role. 
+2.Improvement in safety and quality of life can be achieved by connecting devices,vehicles and Infrastructure all around in a city. 
+3.Best technological solutions can be achieved in smart cities by making different stakeholders to work to gether. 
+4.System integrators,network operator and technology provider  have a role to play in working With governments to enable smart solutions. 
+5.building such solution sonanopen,standards-based communications platform that can be Continuously use disa challenge. 
+6.We present a waste collection management solution based on providing intelligence to Wastebins,using an IoT prototype with sensors. 
+7.Simulations for several cases are carried out to investigate the benefits of such system over a traditional system. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CHAPTER -10 
+_________________________________________________ 
+CONCLUSION  
+ We have implemented real time waste management system by using smart dustbins to check the fill level of smart dustbins whether the dustbin are full or not. In this system the information of all smart dustbins can be accessed from anywhere and anytime by the concern person and he/she can take a decision accordingly. By implementing this proposed system the cost reduction, resource optimization, effective usage of smart dustbins can be done. This system in directly reducing traffic in the city. In major cities the garbage collection vehicle visit the area’s everyday twice or thrice depends on the population of the particular area and sometimes these dustbins may not be full. Our System will inform the status of each and every dust bin in real time so that the concerned authority can send the garbage collection vehicle only when the dustbin is full.  
+ 	 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+CHAPTER -11 
+ 
+ 
+
+ 
+REFERENCES/ BIBLIOGRAPHY 
+ 
+* https://en.m.wikipedia.org/Arduinowiki 
+* https://components101.com/ultrasonic 
+* https://www.rhydolabz.com/sim900 
+* https://en.m.wikipedia.org/lcddisplay ? https://www.electronicshub.org/Arduinobook 
+ 
+Goverment Polytechnic,Nashik. 
+
+Goverment Polytechnic,Nashik. 
+
+Smart Waste Management Using Iot 
+1 
+
+Smart Waste Management Using Iot 
+1 
+
+Goverment Polytechnic,Nashik. 
+
+Smart Waste Management Using Iot 
+1 
+
